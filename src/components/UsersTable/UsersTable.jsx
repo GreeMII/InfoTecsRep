@@ -10,7 +10,6 @@ const UsersTable = ({users, sortField, sortOrder, filterCity, filterToAge, filte
     const navigate = useNavigate();
 
 
-    //ALL FOR FILTER
 
     const allCity = [...new Set(users.map(user => user.address?.city))]
 
@@ -38,8 +37,6 @@ const UsersTable = ({users, sortField, sortOrder, filterCity, filterToAge, filte
         setFilterCity(e.target.value);
     }
 
-
-    // ALL OTHER
     const handleClickCell = (user) => {
         navigate(`/users/${user.id}`, { state: { user } });
     }

@@ -34,12 +34,11 @@ export const UserHooks = () => {
     const filteredUsers = useMemo(() => {
         let result = [...users];
 
-        // 1. Фильтр по городу
         if (filterCity && filterCity !== 'none') {
             result = result.filter(user => user.address?.city === filterCity);
         }
 
-        // 2. Фильтр по возрасту (ОТ) - если задано, берём всех, кто >= этого возраста
+
         if (filterFromAge && filterFromAge !== '') {
             const fromAge = Number(filterFromAge);
             if (!isNaN(fromAge) && fromAge >= 0) {
@@ -47,7 +46,6 @@ export const UserHooks = () => {
             }
         }
 
-        // 3. Фильтр по возрасту (ДО) - если задано, берём всех, кто <= этого возраста
         if (filterToAge && filterToAge !== '') {
             const toAge = Number(filterToAge);
             if (!isNaN(toAge) && toAge >= 0) {
