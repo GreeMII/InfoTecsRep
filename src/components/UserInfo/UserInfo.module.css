@@ -1,4 +1,3 @@
-/* Контейнер страницы */
 .pageContainer {
     min-height: 100vh;
     display: flex;
@@ -8,7 +7,6 @@
     padding: 20px;
 }
 
-/* Карточка */
 .card {
     background: #ffffff;
     border-radius: 16px;
@@ -22,7 +20,6 @@
     padding: 20px;
 }
 
-/* Шапка */
 .cardHeader {
     display: flex;
     justify-content: space-between;
@@ -61,7 +58,7 @@
     text-overflow: ellipsis;
 }
 
-/* Кнопка закрытия */
+
 .closeButton {
     background: none;
     border: none;
@@ -88,7 +85,6 @@
     height: 18px;
 }
 
-/* Контакты */
 .contactInfo {
     display: flex;
     flex-direction: column;

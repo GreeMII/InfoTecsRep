@@ -8,21 +8,17 @@ const FilterIcon = IoFilterOutline;
 const UsersTable = ({users, sortField, sortOrder, filterCity, filterToAge, filterFromAge, setSortField, setSortOrder, setFilterCity, setFilterToAge, setFilterFromAge}) => {
 
     const navigate = useNavigate();
-
-
-
     const allCity = [...new Set(users.map(user => user.address?.city))]
 
+
+    // Filter and Sort
     const [ShowFilter, setShowFilter] = React.useState(false);
-
-
 
     const handleChangeBoxFilter = () => {
         setShowFilter(!ShowFilter);
         setFilterCity("none");
         setFilterToAge("");
         setFilterFromAge("");
-
     }
 
     const handleFromAgeFilter = (e) => {
@@ -37,20 +33,20 @@ const UsersTable = ({users, sortField, sortOrder, filterCity, filterToAge, filte
         setFilterCity(e.target.value);
     }
 
-    const handleClickCell = (user) => {
-        navigate(`/users/${user.id}`, { state: { user } });
-    }
 
     const handleChangeSortField = (e) => {
         setSortField(e.target.value);
         if (e.target.value === "none") {
             setSortOrder("asc")
         }
-        console.log(e.target.value)
     }
     const handleChangeSortOrder = (e) => {
         setSortOrder(e.target.value);
-        console.log(e.target.value)
+    }
+
+    // Go To UserInfo on Click
+    const handleClickCell = (user) => {
+        navigate(`/users/${user.id}`, { state: { user } });
     }
 
     return (

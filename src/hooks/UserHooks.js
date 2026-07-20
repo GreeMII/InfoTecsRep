@@ -2,13 +2,17 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { UserApi } from '../services/UserApi';
 
 export const UserHooks = () => {
+
+    // take a data users
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    // State Sort
     const [sortField, setSortField] = useState('');
     const [sortOrder, setSortOrder] = useState('asc');
 
+    // State Filter
     const [filterCity, setFilterCity] = React.useState('');
     const [filterFromAge, setFilterFromAge] = React.useState("");
     const [filterToAge, setFilterToAge] = React.useState("");
@@ -31,6 +35,7 @@ export const UserHooks = () => {
         fetchUsers();
     }, []);
 
+    // Filter Users by City and Age
     const filteredUsers = useMemo(() => {
         let result = [...users];
 
@@ -56,6 +61,7 @@ export const UserHooks = () => {
         return result;
     }, [users, filterCity, filterFromAge, filterToAge]);
 
+    // Sort Users by FIO, age, gender and phone
     const sortedUsers = useMemo(() => {
         if (!sortField || sortField === 'none') {
             return filteredUsers;
@@ -88,7 +94,6 @@ export const UserHooks = () => {
                     valueB = b[sortField] || '';
             }
 
-            // Сравнение с учётом порядка
             if (valueA < valueB) return sortOrder === 'asc' ? -1 : 1;
             if (valueA > valueB) return sortOrder === 'asc' ? 1 : -1;
             return 0;

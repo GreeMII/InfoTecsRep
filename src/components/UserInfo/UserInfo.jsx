@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './UserInfo.module.css';
 import { CgClose } from "react-icons/cg";
 import { MdEmail, MdPhoneIphone, MdLocationOn  } from "react-icons/md";
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate } from 'react-router-dom';
 
+
+// AllIcons
 const CloseIcon = CgClose;
 const PhoneIcon = MdPhoneIphone;
 const EmailIcon = MdEmail;
@@ -11,6 +13,7 @@ const LocationIcon = MdLocationOn;
 
 const UserInfo = () => {
 
+    // For Routes
     const navigate = useNavigate();
     const location = useLocation();
     const user = location.state?.user;

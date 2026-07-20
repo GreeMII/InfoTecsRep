@@ -1,5 +1,6 @@
-const API_URL = 'https://dummyjson.com/users'
+const API_URL = 'https://api.allorigins.win/raw?url=https://dummyjson.com/users';
 
+// CLASS for handling Api Errors
 export class ApiError extends Error {
     constructor(message,status,data = null) {
         super(message);
@@ -9,7 +10,7 @@ export class ApiError extends Error {
     }
 }
 
-
+// function to retrieve all users from the API
 export const UserApi = {
     async getAllUsers() {
         try {
@@ -34,6 +35,8 @@ export const UserApi = {
         }
     }
 };
+
+// function for handling HTTP errors
 
 //TODO!
 

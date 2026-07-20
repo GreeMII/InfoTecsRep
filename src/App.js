@@ -20,10 +20,9 @@ function App() {
       setFilterToAge,
   } = UserHooks();
 
-  console.log(users);
 
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/InfoTecsRep">
         <Routes>
           <Route path="/" element={<UsersTable users={users} sortField={sortField} sortOrder={sortOrder} filterCity={filterCity} filterFromAge={filterFromAge} filterToAge={filterToAge}  setSortField={setSortField} setSortOrder={setSortOrder} setFilterCity={setFilterCity} setFilterFromAge={setFilterFromAge} setFilterToAge={setFilterToAge} />} />
           <Route path="/users/:id" element={<UserInfo user={users} />} />
