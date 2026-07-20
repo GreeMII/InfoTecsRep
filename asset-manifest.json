@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/InfoTecsRep/static/css/main.3ac067c2.css",
+    "main.js": "/InfoTecsRep/static/js/main.659b1f41.js",
+    "index.html": "/InfoTecsRep/index.html",
+    "main.3ac067c2.css.map": "/InfoTecsRep/static/css/main.3ac067c2.css.map",
+    "main.659b1f41.js.map": "/InfoTecsRep/static/js/main.659b1f41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ac067c2.css",
+    "static/js/main.659b1f41.js"
+  ]
+}
