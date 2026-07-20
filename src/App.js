@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import UsersTable from "./components/UsersTable/UsersTable";
+import UserInfo from "./components/UserInfo/UserInfo";
+import { UserHooks } from './hooks/UserHooks';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const {
+      users,
+      sortField,
+      sortOrder,
+      filterCity,
+      filterFromAge,
+      filterToAge,
+      setSortField,
+      setSortOrder,
+      setFilterCity,
+      setFilterFromAge,
+      setFilterToAge,
+  } = UserHooks();
+
+  console.log(users);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<UsersTable users={users} sortField={sortField} sortOrder={sortOrder} filterCity={filterCity} filterFromAge={filterFromAge} filterToAge={filterToAge}  setSortField={setSortField} setSortOrder={setSortOrder} setFilterCity={setFilterCity} setFilterFromAge={setFilterFromAge} setFilterToAge={setFilterToAge} />} />
+          <Route path="/users/:id" element={<UserInfo user={users} />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
