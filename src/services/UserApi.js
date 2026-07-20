@@ -1,4 +1,4 @@
-const API_URL = 'https://api.allorigins.win/raw?url=https://dummyjson.com/users';
+const API_URL = 'https://corsproxy.io/?https://dummyjson.com/users';
 
 // CLASS for handling Api Errors
 export class ApiError extends Error {

@@ -42,7 +42,6 @@ const UserInfo = () => {
                         </button>
                     </div>
 
-                    {/* Контакты */}
                     <div className={styles.contactInfo}>
                         <p className={styles.infoItem}>
                             <span className={styles.infoLabel}><EmailIcon/></span>
@@ -58,7 +57,6 @@ const UserInfo = () => {
                         </p>
                     </div>
 
-                    {/* Теги */}
                     <div className={styles.tags}>
                         <span className={`${styles.tag}  `}>
 
