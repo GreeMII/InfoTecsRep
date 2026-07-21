@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/InfoTecsRep/static/css/main.3ac067c2.css",
-    "main.js": "/InfoTecsRep/static/js/main.d81b3f7a.js",
+    "main.css": "/InfoTecsRep/static/css/main.f8490e4b.css",
+    "main.js": "/InfoTecsRep/static/js/main.83606541.js",
     "index.html": "/InfoTecsRep/index.html",
-    "main.3ac067c2.css.map": "/InfoTecsRep/static/css/main.3ac067c2.css.map",
-    "main.d81b3f7a.js.map": "/InfoTecsRep/static/js/main.d81b3f7a.js.map"
+    "main.f8490e4b.css.map": "/InfoTecsRep/static/css/main.f8490e4b.css.map",
+    "main.83606541.js.map": "/InfoTecsRep/static/js/main.83606541.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ac067c2.css",
-    "static/js/main.d81b3f7a.js"
+    "static/css/main.f8490e4b.css",
+    "static/js/main.83606541.js"
   ]
 }
