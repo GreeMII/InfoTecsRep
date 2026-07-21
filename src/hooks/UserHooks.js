@@ -3,13 +3,13 @@ import { UserApi } from '../services/UserApi';
 
 export const UserHooks = () => {
 
-    // take a data users
+    // Take a data users
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     // State Sort
-    const [sortField, setSortField] = useState('');
+    const [sortField, setSortField] = useState('none');
     const [sortOrder, setSortOrder] = useState('asc');
 
     // State Filter
